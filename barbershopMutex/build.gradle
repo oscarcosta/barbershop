@@ -15,9 +15,15 @@ plugins {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'BarberShop'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes "Main-Class": "BarberShop"
+    }
+}
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
