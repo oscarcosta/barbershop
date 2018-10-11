@@ -20,7 +20,10 @@ public class Customer implements Runnable {
     public void run() {
         try {
             System.out.printf("Customer %d arrived\n", id);
-            barberShop.enterShop(this);
+            if (!barberShop.enterShop(this)) {
+                System.out.printf("Customer %d is leaving because the BarberShop is full\n", id);
+                return;
+            }
 
             getHairCut();
         } catch (InterruptedException e) {

@@ -27,9 +27,12 @@ public class BarberShop {
         }
     }
 
-    public void enterShop(Customer cust) throws InterruptedException {
-        queue.put(cust);
+    public boolean enterShop(Customer cust) throws InterruptedException {
+        if (!queue.offer(cust, 0, TimeUnit.MILLISECONDS)) {
+            return false;
+        }
         syncQueue.take();
+        return true;
     }
 
     public Customer nextCustomer() throws InterruptedException {
