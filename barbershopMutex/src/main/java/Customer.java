@@ -22,8 +22,8 @@ public class Customer implements Runnable {
     }
 
     private void getHairCut() throws InterruptedException {
-        System.out.printf("Customer %d is having his hair cut\n", id);
-        Thread.sleep(ThreadLocalRandom.current().nextInt(0, 100));
+        //System.out.printf("Customer %d is having his hair cut\n", id);
+        //Thread.sleep(ThreadLocalRandom.current().nextInt(0, 100));
     }
 
     @Override

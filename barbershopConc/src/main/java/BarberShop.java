@@ -18,12 +18,12 @@ public class BarberShop {
 
         // Customers start to arrive
         for (int i = 0; ; i++) {
-            try {
-                Thread.sleep(ThreadLocalRandom.current().nextInt(0, 100));
+            //try {
+                //Thread.sleep(ThreadLocalRandom.current().nextInt(0, 100));
                 new Thread(new Customer(i,this)).start();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            //} catch (InterruptedException e) {
+            //    e.printStackTrace();
+            //}
         }
     }
 

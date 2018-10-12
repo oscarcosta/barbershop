@@ -29,7 +29,7 @@ public class BarberShop {
         // Customers start to arrive
         for (int i = 0; ; i++) {
             try {
-                Thread.sleep(ThreadLocalRandom.current().nextInt(0, 100));
+                Thread.sleep(50);//ThreadLocalRandom.current().nextInt(0, 100));
                 new Thread(new Customer(i,this)).start();
             } catch (InterruptedException e) {
                 e.printStackTrace();
